@@ -1,0 +1,99 @@
+﻿<Window x:Class="Ejercicio3_Imagen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Imagen" 
+        Icon="32.ico"
+        Height="450" 
+        Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="133*"/>
+            <ColumnDefinition Width="263*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock 
+            HorizontalAlignment="Left" 
+            Margin="318,44,0,0" 
+            TextWrapping="Wrap" 
+            Text="Opacidad" 
+            VerticalAlignment="Top" 
+            FontWeight="Bold" 
+            FontSize="20" Grid.Column="1"/>
+        <RadioButton 
+            x:Name="opacidadAlta"
+            Content="Alta"
+            HorizontalAlignment="Left" 
+            Margin="318,79,0,0" 
+            VerticalAlignment="Top"
+            GroupName="opacidad"
+            Checked="OpacidadAlta_Checked" Grid.Column="1"/>
+        <RadioButton 
+            x:Name="opacidadMedia"
+            Content="Media" 
+            HorizontalAlignment="Left" 
+            Margin="318,107,0,0" 
+            VerticalAlignment="Top"
+            GroupName="opacidad"
+            Checked="OpacidadMedia_Checked" Grid.Column="1"/>
+        <RadioButton 
+            x:Name="opacidadBaja"
+            Content="Baja"
+            HorizontalAlignment="Left"
+            Margin="318,134,0,0"
+            VerticalAlignment="Top"
+            GroupName="opacidad"
+            Checked="OpacidadBaja_Checked" Grid.Column="1"/>
+        <TextBlock 
+            HorizontalAlignment="Left"
+            Margin="318,208,0,0" 
+            TextWrapping="Wrap" 
+            Text="Ajuste" 
+            VerticalAlignment="Top" 
+            FontWeight="Bold"
+            FontSize="20" Grid.Column="1"/>
+        <RadioButton 
+            x:Name="relleno"
+            Content="Relleno (Fill)" 
+            HorizontalAlignment="Left" 
+            Margin="318,259,0,0"
+            VerticalAlignment="Top"
+            GroupName="ajuste"
+            Checked="Relleno_Checked" Grid.Column="1"/>
+        <RadioButton 
+            x:Name="uniforme"
+            Content="Uniforme (Uniform)" 
+            HorizontalAlignment="Left" 
+            Margin="318,287,0,0" 
+            VerticalAlignment="Top"
+            GroupName="ajuste"
+            Checked="Uniforme_Checked" Grid.Column="1"/>
+        <RadioButton
+            x:Name="rellenoUniforme"
+            Content="Relleno Uniforme (UniformToFill)" 
+            HorizontalAlignment="Left"
+            Margin="318,318,0,0" 
+            VerticalAlignment="Top"
+            GroupName="ajuste"
+            Checked="RellenoUniforme_Checked" Grid.Column="1"/>
+        <RadioButton 
+            x:Name="sinAjuste"
+            Content="Sin Ajuste (None)"
+            HorizontalAlignment="Left" 
+            Margin="318,351,0,0" 
+            VerticalAlignment="Top"
+            GroupName="ajuste"
+            Checked="SinAjuste_Checked" Grid.Column="1"/>
+        <Image 
+            x:Name="imagen"
+            HorizontalAlignment="Left" 
+            Height="390" 
+            Margin="62,14,0,0" 
+            VerticalAlignment="Top"
+            Width="438"
+            Source="episodioIV.jpg" 
+            Grid.ColumnSpan="2">
+        </Image>
+    </Grid>
+</Window>
